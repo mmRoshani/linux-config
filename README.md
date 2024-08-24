@@ -61,7 +61,7 @@
     - [colorls](https://github.com/athityakumar/colorls)
 
     ```sh
-    $make i-colls
+    $ make i-colls
     # sudo gem install colorls
     ```
 
