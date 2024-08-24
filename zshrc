@@ -155,5 +155,13 @@ esac
 
 # aliases
 alias t="todo.sh" 
+
 alias m="make"
+
 alias g="git"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git pu" # pull, push
+alias gf="git fetch"
+
+alias e="exit"
