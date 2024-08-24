@@ -1,6 +1,6 @@
 # My Customized Linux Configurations
 
-**Online Documentation is located [here](https://mmroshani.github.io/linux/linux-config).**
+**Online Documentation is located [here](https://mmroshani.github.io/post/linux/linux-config/).**
 
 ## Requirements
 
