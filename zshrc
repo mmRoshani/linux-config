@@ -161,7 +161,7 @@ alias m="make"
 alias g="git"
 alias ga="git add"
 alias gc="git commit"
-alias gp="git pu" # pull, push
+alias gp="git push"
 alias gf="git fetch"
 
 alias e="exit"
