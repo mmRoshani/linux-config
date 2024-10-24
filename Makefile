@@ -41,6 +41,22 @@ i-colls:
 	@echo "clone & installing zsh-autosugeestions"
 	@sudo gem install colorls
 
+p-set-n:
+	@clear
+	@echo "setting up proxy for nekoray"
+	export all_proxy=socks://127.0.0.1:2080/  && \
+	export ALL_PROXY=socks://127.0.0.1:2080/  && \
+	export http_proxy=http://127.0.0.1:2081  && \
+	export HTTP_PROXY=http://127.0.0.1:2081  && \
+	export https_proxy=http://127.0.0.1:2081  && \
+	export HTTPS_PROXY=http://127.0.0.1:2081
 
-
-
+p-set-c:
+	@clear
+	@echo "setting up proxy for clash-verge"
+	export all_proxy=socks://127.0.0.1:7897/  && \
+	export ALL_PROXY=socks://127.0.0.1:7897/  && \
+	export http_proxy=http://127.0.0.1:7897  && \
+	export HTTP_PROXY=http://127.0.0.1:7897  && \
+	export https_proxy=http://127.0.0.1:7897  && \
+	export HTTPS_PROXY=http://127.0.0.1:7897
