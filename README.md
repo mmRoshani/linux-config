@@ -24,6 +24,13 @@
     $ make i-packages
     ```
 
+- nerd fonts
+  ```
+  # https://github.com/getnf/getnf
+  
+  $ curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
+  ``` 
+
 - [OhMyZsh](https://github.com/ohmyzsh/ohmyzsh)
 
     ```sh
