@@ -110,11 +110,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-echo -e "Hello dear mmRoshani\n $(fortune computers)" | cowsay -f tux | lolcat
+export http_proxy=http://127.0.0.1:2080/
+export https_proxy="$http_proxy"
+export no_proxy="localhost,127.0.0.1,0.0.0.0"
 
-
-
-
+echo -e "*** Hello dear mmRoshani\n*** I am routing through the proxy ($http_proxy)\nHere is what I was thinking about:\n$(fortune computers)" | cowsay -f tux | lolcat
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -170,10 +170,3 @@ alias gp="git push"
 alias gf="git fetch"
 
 alias e="exit"
-
-
-echo "*** I am routing through proxy"
-
-export  http_proxy=http://127.0.0.1:2080/
-export https_proxy="$http_proxy"
-export no_proxy="localhost,127.0.0.1,0.0.0.0"
