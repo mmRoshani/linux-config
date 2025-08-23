@@ -114,7 +114,6 @@ echo -e "Hello dear mmRoshani\n $(fortune computers)" | cowsay -f tux | lolcat
 
 
 
-echo "*** The activities of this system’s kernel are under continuous surveillance by TOMaaR. Any unauthorized actions will be met with stringent consequences (ass kicking), personally enforced by mmRoshani. Best Regards."
 
 
 
@@ -126,7 +125,7 @@ export PATH=/root/.local/share/gem/ruby/3.*.*/bin:$PATH
 export PATH=/home/mmroshani/.gem/ruby/3.*.*/bin:$PATH
 
 # nvm
-export NVM_DIR="$HOME/.config/nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -145,6 +144,8 @@ eval "$(pyenv init -)"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# system paths
+export PATH=$PATH:~/.local/bin
 
 # pnpm
 export PNPM_HOME="/home/mmroshani/.local/share/pnpm"
@@ -169,3 +170,10 @@ alias gp="git push"
 alias gf="git fetch"
 
 alias e="exit"
+
+
+echo "*** I am routing through proxy"
+
+export  http_proxy=http://127.0.0.1:2080/
+export https_proxy="$http_proxy"
+export no_proxy="localhost,127.0.0.1,0.0.0.0"
