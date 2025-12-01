@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+ Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -110,9 +110,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export http_proxy=http://127.0.0.1:2080/
-export https_proxy="$http_proxy"
-export no_proxy="localhost,127.0.0.1,0.0.0.0"
+# export http_proxy=http://127.1:10808/
+# export https_proxy="$http_proxy"
+# export no_proxy="localhost,127.0.0.1,0.0.0.0"
+
+function setproxy() {
+        echo "Setting mmRoshani system proxies ;)"
+    export {http,https,ftp}_proxy="http://127.1:10808"
+    export {HTTP,HTTPS,FTP}_PROXY="http://127.1:10808"
+}
+
+# Unset Proxy
+function unsetproxy() {
+    echo "Un setting mmRoshani system proxies!"
+    unset {http,https,ftp}_proxy
+    unset {HTTP,HTTPS,FTP}_PROXY
+}
+
 
 echo -e "*** Hello dear mmRoshani\n*** I am routing through the proxy ($http_proxy)\n*** Here is what I was thinking about:\n$(fortune computers)" | cowsay -f tux | lolcat
 
@@ -158,6 +172,10 @@ esac
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# cuda
+export PATH="/opt/cuda/bin:$PATH"
+export LD_LIBRARY_PATH="/opt/cuda/lib64${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+
 # aliases
 alias t="todo.sh" 
 
@@ -170,3 +188,5 @@ alias gp="git push"
 alias gf="git fetch"
 
 alias e="exit"
+
+alias vim="nvim"
